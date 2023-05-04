@@ -1,0 +1,167 @@
+Java -> Notes
+
+Topic -> Java functions
+
+Syntax with parameters
+
+ReturnType name (type param1, type2 param2){
+   // body
+   Return statement;
+}
+
+foo(a,b);
+
+These param1 and param2 are actually formal parameters or formal params -> which is actually used at the time of function definition.
+
+The function foo(); having two variables which is to be passed; which is actually known as actual params or arguments which is used at the time of calling the funtion.
+
+Call by value -> jo bhi change hoga wo Kewal this function me hi hoga, main function me nhi hoga any change… 
+Java always call by Value -> to understand this draw memory stack and can observe.
+
+//code for swapping.
+Public static void swap(int a, int b){
+int temp =a;
+	a=b;
+	b=temp;
+	
+	SOP(a);
+	SOP(b);
+}
+public static void main(){
+	int a =5;
+	b=6;
+	swap(a,b);
+}
+
+Call by reference -> not hapenning in java
+
+Product in Java->
+public static void product(int a,int b){
+	return a*b;
+}
+
+
+Factorial of a Number
+
+Public static int fact(int number){
+	return number * fact(number-1);
+}
+
+In c++
+Int fact(int number){
+	return number * fact(number-1)
+}
+
+
+Binomial Coefficient
+nCr = !n/ ( !r * !(n-r))
+Int fact( int n){
+	int f=1;
+	for (int I=0;i<n;i++){
+		f = I*f;
+	}
+
+}
+
+Public static void main(String[] args){
+Int n=5, r=2;
+
+	int bionomialCoeff = fact(5) / (fact(r) * fact(n-r))
+
+}
+
+Function Overloading…
+
+In this actually, we can use the same name of the method by providing the different parameters/or different types of parameters. Suppose we want to make a function to add numbers.
+F1: sum of two numbers
+F2: sum of three numbers
+
+Public static int sum(int a,int b){
+	return a+b;
+}
+
+Public static int sum(int a,int b, int c){
+	return a+b+c;
+}
+
+Note -> If we have same name but the return type is different, then it’s not overloading. Bcoz function overloading only check two things -> type of pramameter and number of parameter.
+i.e.
+Int sum(int a,int b){
+// op…
+}
+
+float sum(int a,int b){
+// opre….
+}
+
+Function Overloading using DataTypes
+Int sum(int a,int b){
+// op…
+}
+
+float sum(float a,float b){
+// opre….
+}
+
+// to call method having float parameter sum(2.3f, 4.2f)
+
+Check if a number is prime.
+
+Public static boolean isPrime(int n){
+	if(n==2)
+	return true;
+	for( int i=2;i<=Math.sqrt(n);i++){
+		if(n%i== 0){
+			return false;
+		}
+	}
+	return true;
+			
+}
+
+
+Public statis void main(){
+
+isPrime(7);
+
+}
+
+// Print Prime Numbers in Range
+Public static void primeRange(int n){
+	for(int I=2;i<= n; I++){
+	if(isPrime(i)){
+		System.out.println(I +” “);
+	}
+     }
+}
+
+
+Binary to decimal
+
+———————————————————->
+
+
+Arrays
+*) create
+
+Creating an array
+
+dataType arrayName = new dataType[size]
+
+Int marks = new int[50];
+
+Int marks = {1,2,3} // java will automaticallly get the size here
+
+Import java.util.*;
+
+Public class ArrayCC{
+	public static void main( String args[]){
+		int marks = new int[10];
+
+		Scanner sc = new scanner(system.in);
+
+
+
+
+
+
