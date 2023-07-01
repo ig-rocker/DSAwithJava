@@ -1,0 +1,12 @@
+Basic rules to take care of:
+1. Starting interval:  mostly start and end points are 0 and n-1 respectively .
+2. mid value : mid value id mostly the (start+end)/2
+3. next loop index: it should be take care in such a way that next value should not include the already visited value
+        i.e., start=mid+1 & end=mid-1
+
+4. while loop conditions : need to be taken care so that the loop does not be in infinite 
+    mostly use 
+
+    while(start<end)
+
+

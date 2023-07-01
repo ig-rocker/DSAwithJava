@@ -1,0 +1,8 @@
+In this firstly, we need to look for the pivot point from where the array rotated.
+
+To find pivot point:
+* For sorted aray, the pivot point is only element whose next element is smaller than it
+* For
+
+
+
