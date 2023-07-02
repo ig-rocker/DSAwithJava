@@ -1,0 +1,59 @@
+In this we can apply the same solution, as we have in the case of Search element in the sorted and rotated array wiht some enhancememnt.
+
+ int findMin(int arr[], int n)
+    {
+        //complete the function here
+        int start=0, end=arr.length-1, mid,ans=arr[0];
+        while(start<=end){
+            mid=(start+end)/2;
+            if(arr[start]<=arr[mid]){
+                if(arr[start]<ans){
+                    ans=arr[start];
+                }
+                start=mid+1;
+            }
+            else{
+                if(arr[mid]<ans){
+                    ans=arr[mid];
+                }
+                end=mid-1;
+            }
+        }
+        return ans;
+    }
+
+
+    We can also optimise the above solution.
+
+    As there is a scenario come, when we crossed the pivot point ,i.e, arr[low]<=arr[high]
+    at that time, the low may be the possible answer & hence we can brea the loop there.
+    Thus, the below code represents the scenario.
+
+
+ int findMin(int arr[], int n)
+    {
+        //complete the function here
+        int start=0, end=arr.length-1, mid,ans=arr[0];
+        while(start<=end){
+            mid=(start+end)/2;
+            if(arr[start]<=arr[end]){
+                if(arr[start]<ans){
+                    ans=arr[start];
+                }
+            break;
+            }
+            if(arr[start]<=arr[mid]){
+                if(arr[start]<ans){
+                    ans=arr[start];
+                }
+                start=mid+1;
+            }
+            else{
+                if(arr[mid]<ans){
+                    ans=arr[mid];
+                }
+                end=mid-1;
+            }
+        }
+        return ans;
+    }
